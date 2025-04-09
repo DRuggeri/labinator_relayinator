@@ -179,9 +179,9 @@ void setup()
     button.setDoubleClickTime(10);
     button.setLongClickTime(500);
 
-    digitalWrite(pins[0], ON);
-    offstack[0][0] = millis() + TOGGLE_TIME;
-    offstack[0][1] = ON;
+    digitalWrite(pins[6], ON);
+    offstack[6][0] = millis() + TOGGLE_TIME;
+    offstack[6][1] = ON;
     
     Serial.println("ready");
 }
