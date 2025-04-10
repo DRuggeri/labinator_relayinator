@@ -256,7 +256,7 @@ void processData() {
             } else {
                 int relay = std::stoi(parts[1]);
                 int i = relay - 1;
-                if (i >= 0 && i <= 8 ) {
+                if (i >= 0 && i < 8 ) {
                     if (status[i] != target) {
                         digitalWrite(pins[i], ON);
                         offstack[i][0] = millis() + (target == OFF ? POWER_TIME : TOGGLE_TIME);
@@ -297,6 +297,6 @@ void loop() {
 
     if (changes) {
         printStatus();
-        Serial.printf("status %d %d %d %d %d %d %d %d\n", status[0], status[1], status[2], status[3], status[4], status[5], status[6], status[7]);
+        //Serial.printf("status %d %d %d %d %d %d %d %d\n", status[0], status[1], status[2], status[3], status[4], status[5], status[6], status[7]);
     }
 }
