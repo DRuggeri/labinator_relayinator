@@ -246,7 +246,7 @@ void processData() {
             int target = command == "off" ? OFF : ON;
 
             if ("all" == parts[1]) {
-                for(int i = 0 ; i < 8 ; i++) {
+                for(int i = 0 ; i < 6 ; i++) {
                     if (status[i] != target) {
                         digitalWrite(pins[i], ON);
                         offstack[i][0] = millis() + (target == OFF ? POWER_TIME : TOGGLE_TIME);
