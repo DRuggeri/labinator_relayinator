@@ -23,12 +23,13 @@ const byte numChars = 64;
 char receivedChars[numChars];
 int status[8] = {OFF, OFF, OFF, OFF, OFF, OFF, OFF, OFF};
 unsigned long offstack[8][2] = { {0, OFF}, {0, OFF}, {0, OFF}, {0, OFF}, {0, OFF}, {0, OFF}, {0, OFF}, {0, OFF} };
-std::string bootMessages[6] = {"", "", "", "", "", ""};
+
 Adafruit_SSD1306 display;
 Button2 button = Button2(0);
 int selected = -1;
 
 bool ready = false;
+std::string bootMessages[6] = {"", "", "", "", "", ""};
 const long messageIntervalMin = 100;
 const long messageIntervalMax = 1100;
 const long range = messageIntervalMax - messageIntervalMin + 1;
